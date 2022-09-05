@@ -1,8 +1,8 @@
 import { Hash } from 'crypto'
 import {UserDatabase} from '../data/UserDatabase'
-import { CustomError, EmailAlreadyInUse, FieldsNotProvided, InvalidEmail, InvalidName, InvalidPassword, InvalidRole } from '../error/CustomError'
+import { CustomError, EmailAlreadyInUse, FieldsNotProvided, InvalidEmail, InvalidName, InvalidPassword, InvalidRole, UserNotFound } from '../error/CustomError'
 import { user } from '../model/User'
-import { UserInputDTO } from '../model/UserDTO'
+import { LoginInputDTO, UserInputDTO } from '../model/UserDTO'
 import { Authenticator } from '../services/Authenticator'
 import { HashManager } from '../services/HashManager'
 import { IdGenerator } from '../services/IdGenerator'
@@ -49,6 +49,33 @@ export class UserBusiness {
             const payload = { id, role }
             const token = authenticator.generateToken(payload);
 			return token
+
+        } catch (error:any) {
+            throw new CustomError(400, error.message)
+        }
+    }
+
+    public login = async (input: LoginInputDTO):Promise<string> => {
+        try {
+            const {email, password} = input
+
+            if(!email || !password) {throw new FieldsNotProvided()}
+            if(!email.includes('@')) {throw new InvalidEmail()}
+
+            const user = await this.userDatabase.findUserByEmail(email);
+			if (!user) {throw new UserNotFound()}
+
+            const hashPassword = await hashManager.hashCompare(password, user.password)
+            if(!hashPassword) {throw new InvalidPassword()}
+
+            const payload = {
+                id: user.id,
+                role: user.role
+            }
+
+            const token = authenticator.generateToken(payload)
+
+            return token
 
         } catch (error:any) {
             throw new CustomError(400, error.message)
