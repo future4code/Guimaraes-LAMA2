@@ -6,3 +6,8 @@ export interface UserInputDTO {
     password: string,
     role: USER_ROLES
  }
+
+ export interface LoginInputDTO {
+    email: string,
+    password: string
+ }
