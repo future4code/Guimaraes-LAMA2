@@ -60,7 +60,7 @@ export class InvalidToken extends CustomError{
 
 export class MissingInformation extends CustomError{
     constructor() {
-        super(400, 'É necessário completar os campos "title" e "description".')
+        super(400, 'É necessário completar os campos "name ", "musicalGenre"  e "responsible".')
     }
 }
 
@@ -69,3 +69,16 @@ export class MissingToken extends CustomError{
         super(400, 'É necessário fornecer um token.')
     }
 }
+
+export class BandAlreadyRegistered extends CustomError {
+    constructor(){
+        super(409, "Banda Já Cadastrada")
+    }
+}
+
+export class InvalidFields extends CustomError {
+    constructor(){
+        super(400, "Campos inválidos.")
+    }
+}
+
