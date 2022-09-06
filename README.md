@@ -36,5 +36,4 @@ O festival terá duração fixa de 3 dias (sexta, sábado e domingo), começando
    DB_USER = 
    DB_PASSWORD = 
    DB_SCHEMA = 
- 
    ```
