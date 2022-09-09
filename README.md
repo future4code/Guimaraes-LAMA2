@@ -12,8 +12,8 @@ O festival terá duração fixa de 3 dias (sexta, sábado e domingo), começando
 - [x] Login
 - [x] Endpoint de registrar banda
 - [x] Endpoint de visualização de detalhes sobre a banda
-- [ ] Endpoint de adicionar um show a um dia
-- [ ] Endpoint de pegar todos os shows de uma data
+- [x] Endpoint de adicionar um show a um dia
+- [x] Endpoint de pegar todos os shows de uma data
 <hr>
 
 <h3>👩‍💻👩‍💻 Desenvolvedoras</h3>
