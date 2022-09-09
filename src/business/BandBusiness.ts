@@ -1,7 +1,6 @@
 import { BandDatabase } from "../data/BandDatabase";
 import {
   BandAlreadyRegistered,
-  FieldsNotProvided,
   InvalidFields,
   InvalidToken,
   MissingInformation,

@@ -1,7 +1,5 @@
-import { Hash } from "crypto";
 import { UserDatabase } from "../data/UserDatabase";
 import {
-  CustomError,
   EmailAlreadyInUse,
   FieldsNotProvided,
   InvalidEmail,

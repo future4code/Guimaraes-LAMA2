@@ -1,18 +1,32 @@
-export interface showsSignupDTO {
+export interface ShowSignupDTO {
    bandId: string,
-   weekday: weekday,
-   startTime: time,
-   endTime: time
+   weekday: SHOW_DAY,
+   startTime: number,
+   endTime: number
+};
+
+export interface ShowModel {
+id:string,
+   weekday: SHOW_DAY,
+    startTime: number,
+    endTime: number,
+    bandId: string
 }
 
-enum weekday {
-    sexta = "sexta",
-    sabado = "sabado", 
-    domingo = "domingo" 
+export enum SHOW_DAY {
+    FRIDAY = "FRIDAY",
+    SATURDAY = "SATURDAY", 
+    SUNDAY = "SUNDAY" 
 
 }
 
-enum time {
+export interface ShowDetailDTO {
+    weekday: string;
+  }
+
+  
+
+export enum time {
     eigthAM = "08:00",
     nineAM = "09:00",
     tenAM = "10:00",
