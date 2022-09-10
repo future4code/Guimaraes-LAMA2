@@ -1,4 +1,4 @@
-<div align="center" > <img width="100vw" src="https://img.icons8.com/doodle/344/music-library.png"/>
+<div align="center" > <img width="150vw" src="https://img.icons8.com/doodle/344/music-library.png"/>
  <h1 align="center"><strong>L A M A</b></strong></h1></div>
 
 
