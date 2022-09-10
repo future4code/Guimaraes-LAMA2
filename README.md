@@ -1,8 +1,8 @@
 <div align="center" > <img width="150vw" src="https://img.icons8.com/doodle/344/music-library.png"/>
- <h1 align="center"><strong>L A M A</b></strong></h1></div>
+ <h1 align="center"><strong>Labenu Musical Awards</b></strong></h1></div>
 
 
-<h2 align="center">Descrição</h2>
+<h2>Descrição</h2>
 <hr>
 Como você deve saber muito bem, o nosso querido chefinho Astrodev é uma pessoa com Networking incrível e ele conhece vários artistas estrelados. Além disso, ele também é um grande ~~megalomaníaco~~ visionário e está planejando fazer um grande evento: o **LAMA**, *Labenu Musical Awards*, um festival  com várias bandas famosas para a formatura da sua turma e, no final, vocês podem eleger a banda que mais gostaram! Entretanto, na opinião dele, vocês só serão merecedores se entregarem um sistema impecável que permita o gerenciamento completo desses shows.
 
