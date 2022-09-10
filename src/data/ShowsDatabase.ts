@@ -3,7 +3,7 @@ import { ShowModel, ShowSignupDTO } from "../model/ShowsSignupDTO";
 
 export class ShowsDatabase extends BaseDatabase {
   private TABLE = "SHOWS";
-  private TABLEBAND = "BANDAS"
+  
   public createShow = async (input: ShowModel, id: string) => {
     try {
       const { bandId, weekday, startTime, endTime } = input;
@@ -17,7 +17,8 @@ export class ShowsDatabase extends BaseDatabase {
     } catch (error: any) {
       throw new Error(error.sqlMessage);
     }
-  };
+  }
+  
   public alreadyExist = async (
     weekday: string,
     startTime: number
@@ -40,10 +41,7 @@ export class ShowsDatabase extends BaseDatabase {
         .orderBy("start_time", "asc")
         .into("BANDAS")
          
-        
-
         return result
-
 
     } catch (error: any) {
       throw new Error(error.sqlMessage);

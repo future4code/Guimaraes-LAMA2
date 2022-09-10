@@ -8,11 +8,13 @@ import { Authenticator } from "../services/Authenticator";
 import { IdGenerator } from "../services/IdGenerator";
 import { SHOW_DAY } from "../model/ShowsSignupDTO";
 import {
+  InvalidDay,
   InvalidFields,
   InvalidID,
   InvalidRole,
   InvalidShow,
   InvalidTime,
+  InvalidToken,
   InvalidWeekday,
   MissingToken,
   TimeAlreadyRegistered,
@@ -85,13 +87,21 @@ export class ShowBusiness {
   };
 
   public getShow = async (weekday: string, token: string) => {
-    // if (!id) {
-    //   throw new InvalidID();
-    // }
+     if (
+     weekday !== "FRIDAY" && 
+     weekday !== "SATURDAY" && 
+     weekday !== "SUNDAY" &&
+     weekday !== "friday" && 
+     weekday !== "saturday" && 
+     weekday !== "sunday" 
 
-    // if (!token) {
-    //   throw new InvalidRole();
-    // }
+     ) {
+       throw new InvalidDay();
+     }
+
+    if (!token) {
+      throw new InvalidToken();
+    }
 
     const tokenData = authenticator.getTokenData(token);
 

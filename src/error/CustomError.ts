@@ -100,6 +100,15 @@ export class InvalidWeekday extends CustomError {
   }
 }
 
+export class InvalidDay extends CustomError {
+  constructor() {
+    super(
+      400,
+      "O weekday selecionado é inválido!! Selecione entre friday, saturday ou sunday"
+    );
+  }
+}
+
 export class TimeAlreadyRegistered extends CustomError {
   constructor() {
     super(409, "Data e horário já registrados no cronograma de shows");
