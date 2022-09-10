@@ -8,8 +8,8 @@ Como você deve saber muito bem, o nosso querido chefinho Astrodev é uma pessoa
 
 O festival terá duração fixa de 3 dias (sexta, sábado e domingo), começando sempre as 08h e acabando as 23h, totalizando 15h de show a cada dia. As funcionalidades básicas do projeto devem ser:
 
-- [x] Signup
-- [x] Login
+- [x] Signup de usuário
+- [x] Login de usuário
 - [x] Endpoint de registrar banda
 - [x] Endpoint de visualização de detalhes sobre a banda
 - [x] Endpoint de adicionar um show a um dia
