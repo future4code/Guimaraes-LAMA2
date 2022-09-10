@@ -14,6 +14,7 @@ import {
   InvalidRole,
   InvalidShow,
   InvalidTime,
+  InvalidToken,
   InvalidWeekday,
   MissingToken,
   TimeAlreadyRegistered,
@@ -99,7 +100,7 @@ export class ShowBusiness {
      }
 
     if (!token) {
-      throw new InvalidRole();
+      throw new InvalidToken();
     }
 
     const tokenData = authenticator.getTokenData(token);
