@@ -13,7 +13,7 @@ export class ShowController {
         startTime: startTime,
         endTime: endTime,
         bandId: bandId,
-      };
+      }
 
       const token = req.headers.authorization as string;
 
@@ -22,7 +22,7 @@ export class ShowController {
     } catch (error: any) {
       res.status(500).send(error.sqlMessage || error.message);
     }
-  };
+  }
 
   public getShowByDay = async (req: Request, res: Response) => {
     try {
@@ -35,5 +35,5 @@ export class ShowController {
     } catch (error: any) {
       res.status(500).send(error.sqlMessage || error.message);
     }
-  };
+  }
 }
