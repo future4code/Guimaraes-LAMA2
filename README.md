@@ -1,4 +1,4 @@
-<div align="center" > <img width="150vw" src="https://img.icons8.com/doodle/344/music-library.png"/>
+<div align="center" > <img width="150vw" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/344/external-music-activism-flaticons-lineal-color-flat-icons.png"/>
  <h1 align="center"><strong>Labenu Musical Awards</b></strong></h1></div>
 
 
