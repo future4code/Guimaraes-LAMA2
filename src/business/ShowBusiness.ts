@@ -80,17 +80,18 @@ export class ShowBusiness {
     };
     console.log(newShow);
 
-    await this.showDatabase.createShow(newShow, id);
+    const show = await this.showDatabase.createShow(newShow, id);
+    return show
   };
 
-  public getShow = async (id: string, token: string) => {
-    if (!id) {
-      throw new InvalidID();
-    }
+  public getShow = async (weekday: string, token: string) => {
+    // if (!id) {
+    //   throw new InvalidID();
+    // }
 
-    if (!token) {
-      throw new InvalidRole();
-    }
+    // if (!token) {
+    //   throw new InvalidRole();
+    // }
 
     const tokenData = authenticator.getTokenData(token);
 
@@ -98,7 +99,7 @@ export class ShowBusiness {
       throw new Unauthorized();
     }
 
-    const showInfo = await this.showDatabase.getShowById(id);
+    const showInfo = await this.showDatabase.getShowByDay(weekday);
 
     if (!showInfo) {
       throw new InvalidShow();
