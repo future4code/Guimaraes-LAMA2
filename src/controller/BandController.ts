@@ -16,7 +16,7 @@ export class BandController {
         responsible,
       };
       await bandBusiness.signupBand(input, token);
-      res.status(201).send("Banda cadastrada com sucesso");
+      res.status(201).send(`Banda ${name} cadastrada com sucesso`);
       console.log(input);
     } catch (error: any) {
       res.status(error.statusCode || 400).send(error.message);
