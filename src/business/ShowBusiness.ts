@@ -54,6 +54,14 @@ export class ShowBusiness {
       throw new InvalidTime();
     }
 
+    if(
+      typeof startTime !== "number" || 
+      typeof endTime !== "number" || 
+      startTime % 1 !== 0 || 
+      endTime % 1 !== 0 ) {
+      throw new InvalidTime()
+    }
+
     if (
       weekday !== SHOW_DAY.FRIDAY &&
       weekday !== SHOW_DAY.SATURDAY &&
