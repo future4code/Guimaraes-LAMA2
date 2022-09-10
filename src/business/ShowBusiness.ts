@@ -1,6 +1,5 @@
 import { ShowsDatabase } from "../data/ShowsDatabase";
 import {
-  ShowDetailDTO,
   ShowModel,
   ShowSignupDTO,
 } from "../model/ShowsSignupDTO";
@@ -10,8 +9,6 @@ import { SHOW_DAY } from "../model/ShowsSignupDTO";
 import {
   InvalidDay,
   InvalidFields,
-  InvalidID,
-  InvalidRole,
   InvalidShow,
   InvalidTime,
   InvalidToken,
