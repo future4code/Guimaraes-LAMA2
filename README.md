@@ -1,4 +1,4 @@
-<div align="center" > <img width="150vw" src="https://img.icons8.com/external-wanicon-lineal-color-wanicon/344/external-music-love-wanicon-lineal-color-wanicon.png"/>
+<div align="center" > <img width="150vw" src="https://img.icons8.com/external-wanicon-flat-wanicon/344/external-music-happy-new-year-wanicon-flat-wanicon.png"/>
  <h1 align="center"><strong>Labenu Musical Awards</b></strong></h1></div>
 
 
