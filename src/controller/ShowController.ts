@@ -24,7 +24,7 @@ export class ShowController {
     }
   };
 
-  public getShowById = async (req: Request, res: Response) => {
+  public getShowByDay = async (req: Request, res: Response) => {
     try {
       const weekday = req.params.weekday;
 
