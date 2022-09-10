@@ -16,10 +16,11 @@ O festival terá duração fixa de 3 dias (sexta, sábado e domingo), começando
 - [x] Endpoint de pegar todos os shows de uma data
 <hr>
 
-<h3>👩🏻‍💻👩🏻‍💻 Desenvolvedoras</h3>
+ <h3>Desenvolvedoras</h3>
 
-- Camila Coradi Garcia Leal
-- Laíne Reis de Moura
+<div><img width="35vw"src="https://cdn-icons-png.flaticon.com/512/3230/3230393.png"/> - Camila Coradi Garcia Leal <div>
+<div> <img width="35vw"src="https://cdn-icons-png.flaticon.com/512/4661/4661318.png"/> - Laíne Reis de Moura</div>
+<hr>
 
 🔗[Deploy]()
 
