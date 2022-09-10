@@ -5,4 +5,4 @@ export const showRouter = express.Router();
 const showController = new ShowController();
 
 showRouter.post("/addshow", showController.createShow);
-showRouter.get("/infoshow/:id", showController.getShowById)
+showRouter.get("/infoshow/:weekday", showController.getShowById)

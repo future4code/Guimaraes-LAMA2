@@ -26,11 +26,11 @@ export class ShowController {
 
   public getShowById = async (req: Request, res: Response) => {
     try {
-      const id = req.params.id;
+      const weekday = req.params.weekday;
 
       const token = req.headers.authorization as string;
 
-      const showInfo = await showBusiness.getShow(id, token);
+      const showInfo = await showBusiness.getShow(weekday, token);
       res.status(200).send(showInfo);
     } catch (error: any) {
       res.status(500).send(error.sqlMessage || error.message);

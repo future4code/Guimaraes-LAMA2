@@ -3,6 +3,7 @@ import { ShowModel, ShowSignupDTO } from "../model/ShowsSignupDTO";
 
 export class ShowsDatabase extends BaseDatabase {
   private TABLE = "SHOWS";
+  private TABLEBAND = "BANDAS"
   public createShow = async (input: ShowModel, id: string) => {
     try {
       const { bandId, weekday, startTime, endTime } = input;
@@ -30,15 +31,20 @@ export class ShowsDatabase extends BaseDatabase {
     return result;
   };
 
-  public getShowById = async (id: string): Promise<any> => {
+  public getShowByDay = async (weekday: string): Promise<any> => {
     try {
       const result = await ShowsDatabase.connection(this.TABLE)
-        .select("*")
-        .where("id", "like", id)
-        .andWhere("start_time", "<=", "end_time")
-        .andWhere("end_time", ">=", "start_time")
-        .orderBy("start_time", "asc");
-      return result[0];
+        .select("BANDAS.name", "BANDAS.music_genre", "SHOWS.start_time", "SHOWS.end_time")
+        .join("SHOWS", "BANDAS.id", "SHOWS.band_id")
+        .where("week_day", "like", weekday)
+        .orderBy("start_time", "asc")
+        .into("BANDAS")
+         
+        
+
+        return result
+
+
     } catch (error: any) {
       throw new Error(error.sqlMessage);
     }
