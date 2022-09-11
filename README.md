@@ -22,9 +22,9 @@ O festival terá duração fixa de 3 dias (sexta, sábado e domingo), começando
 <div> <img width="35vw"src="https://cdn-icons-png.flaticon.com/512/4661/4661318.png"/> - Laíne Reis de Moura</div>
 <hr>
 
-🔗[Deploy](https://labenu-lama2.herokuapp.com/)
+🔗 [Deploy](https://labenu-lama2.herokuapp.com/)
 
-📙[Documentação](https://documenter.getpostman.com/view/19701937/VVdnX2cd)
+📙 [Documentação](https://documenter.getpostman.com/view/19701937/VVdnX2cd)
 
 
 <h2> Primeiros passos para rodar localmente </h2>
